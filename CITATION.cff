@@ -1,0 +1,15 @@
+cff-version: 1.2.0
+message: "If EnvTrail supports your work, please cite the software."
+title: EnvTrail
+type: software
+version: 0.1.0
+date-released: 2026-07-27
+authors:
+  - family-names: aryatech13
+repository-code: "https://github.com/aryatech13/envtrail"
+url: "https://www.npmjs.com/package/envtrail"
+license: MIT
+keywords:
+  - environment variables
+  - configuration drift
+  - static analysis

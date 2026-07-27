@@ -1,0 +1,43 @@
+name: Feature or adapter request
+description: Propose a language syntax, deployment source, output, or workflow.
+title: "feat: "
+labels: ["enhancement", "needs-triage"]
+body:
+  - type: dropdown
+    id: category
+    attributes:
+      label: Category
+      options:
+        - Source adapter
+        - Documentation adapter
+        - CI or deployment adapter
+        - Reporter
+        - Rule or policy
+        - Developer experience
+    validations:
+      required: true
+  - type: textarea
+    id: problem
+    attributes:
+      label: Problem
+      description: What real workflow is difficult today?
+    validations:
+      required: true
+  - type: textarea
+    id: syntax
+    attributes:
+      label: Minimal sanitized example
+      description: For adapters, show the syntax EnvTrail should recognize.
+      render: text
+  - type: textarea
+    id: proposal
+    attributes:
+      label: Proposed behavior
+    validations:
+      required: true
+  - type: checkboxes
+    id: contribution
+    attributes:
+      label: Contribution
+      options:
+        - label: I would like to help implement this.

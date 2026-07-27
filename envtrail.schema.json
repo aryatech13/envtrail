@@ -1,0 +1,51 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/aryatech13/envtrail/main/envtrail.schema.json",
+  "title": "EnvTrail configuration",
+  "description": "Configuration for EnvTrail environment-variable provenance checks.",
+  "type": "object",
+  "additionalProperties": false,
+  "properties": {
+    "$schema": {
+      "type": "string"
+    },
+    "documentation": {
+      "type": "array",
+      "items": { "type": "string" },
+      "description": "Glob patterns for safe environment templates."
+    },
+    "exclude": {
+      "type": "array",
+      "items": { "type": "string" },
+      "description": "Additional paths to exclude."
+    },
+    "ignore": {
+      "type": "array",
+      "items": { "type": "string" },
+      "description": "Environment-variable name patterns to ignore."
+    },
+    "maxFileSizeKb": {
+      "type": "integer",
+      "minimum": 1,
+      "maximum": 10240,
+      "default": 512
+    },
+    "rules": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "undocumented": { "$ref": "#/$defs/ruleSetting" },
+        "staleDocumentation": { "$ref": "#/$defs/ruleSetting" },
+        "providerOnly": { "$ref": "#/$defs/ruleSetting" },
+        "trackedEnvFile": { "$ref": "#/$defs/ruleSetting" },
+        "dynamicAccess": { "$ref": "#/$defs/ruleSetting" },
+        "duplicateDocumentation": { "$ref": "#/$defs/ruleSetting" }
+      }
+    }
+  },
+  "$defs": {
+    "ruleSetting": {
+      "enum": ["error", "warning", "info", "off"]
+    }
+  }
+}

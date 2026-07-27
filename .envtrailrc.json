@@ -1,0 +1,12 @@
+{
+  "$schema": "./envtrail.schema.json",
+  "exclude": [
+    "**/tests/**"
+  ],
+  "ignore": [
+    "NO_COLOR"
+  ],
+  "rules": {
+    "dynamicAccess": "info"
+  }
+}

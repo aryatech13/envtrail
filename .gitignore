@@ -1,0 +1,10 @@
+node_modules/
+coverage/
+.DS_Store
+*.tgz
+envtrail-report.html
+envtrail-report.json
+.envtrail-cache/
+.npm-cache/
+
+# Keep dist/ committed: GitHub Actions executes the bundled entrypoint.

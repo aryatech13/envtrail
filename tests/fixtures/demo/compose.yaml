@@ -1,0 +1,12 @@
+services:
+  api:
+    build: .
+    environment:
+      DATABASE_URL: ${DATABASE_URL}
+      CACHE_TTL: ${CACHE_TTL:-300}
+      LOG_LEVEL: ${LOG_LEVEL:-info}
+      DEPLOY_REGION: eu-west-1
+  worker:
+    build: .
+    environment:
+      - QUEUE_NAME=${QUEUE_NAME:-emails}

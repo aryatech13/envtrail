@@ -1,0 +1,16 @@
+name: Test
+
+on:
+  pull_request:
+  push:
+    branches: [main]
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    env:
+      STRIPE_SECRET_KEY: ${{ secrets.STRIPE_SECRET_KEY }}
+      LOG_LEVEL: test
+    steps:
+      - uses: actions/checkout@v4
+      - run: npm test

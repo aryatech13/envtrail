@@ -1,0 +1,18 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: acme-api
+spec:
+  template:
+    spec:
+      containers:
+        - name: api
+          image: ghcr.io/acme/api:latest
+          env:
+            - name: DATABASE_URL
+              valueFrom:
+                secretKeyRef:
+                  name: api-secrets
+                  key: database-url
+            - name: DEPLOY_REGION
+              value: eu-west-1

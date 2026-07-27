@@ -1,0 +1,46 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="763" viewBox="0 0 1200 763" role="img" aria-label="EnvTrail terminal output">
+  <defs>
+    <linearGradient id="terminal-bg" x1="0" y1="0" x2="1200" y2="763" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#171D1D"/>
+      <stop offset="1" stop-color="#0D1111"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="763" rx="22" fill="url(#terminal-bg)"/>
+  <rect x=".5" y=".5" width="1199" height="762" rx="21.5" fill="none" stroke="#38423F"/>
+  <circle cx="30" cy="28" r="6" fill="#FF8A5B"/>
+  <circle cx="50" cy="28" r="6" fill="#F7CA72"/>
+  <circle cx="70" cy="28" r="6" fill="#C9F773"/>
+  <text x="1170" y="33" fill="#65716C" text-anchor="end" font-family="Inter,Arial,sans-serif" font-size="11" letter-spacing="1.2">ENVTRAIL · DEMO</text>
+  <path d="M0 52H1200" stroke="#303A37"/>
+  <text x="36" y="78" fill="#C9F773" font-family="'SFMono-Regular',Consolas,'Liberation Mono',monospace" font-size="14" xml:space="preserve">◆ EnvTrail  configuration provenance</text>
+<text x="36" y="99" fill="#84908A" font-family="'SFMono-Regular',Consolas,'Liberation Mono',monospace" font-size="14" xml:space="preserve">  demo · 6 files scanned</text>
+<text x="36" y="120" fill="#E9E8DF" font-family="'SFMono-Regular',Consolas,'Liberation Mono',monospace" font-size="14" xml:space="preserve"></text>
+<text x="36" y="141" fill="#E9E8DF" font-family="'SFMono-Regular',Consolas,'Liberation Mono',monospace" font-size="14" xml:space="preserve">  74/100  needs attention</text>
+<text x="36" y="162" fill="#C9F773" font-family="'SFMono-Regular',Consolas,'Liberation Mono',monospace" font-size="14" xml:space="preserve">  4 aligned  1 undocumented  1 stale  1 deploy-only</text>
+<text x="36" y="183" fill="#E9E8DF" font-family="'SFMono-Regular',Consolas,'Liberation Mono',monospace" font-size="14" xml:space="preserve"></text>
+<text x="36" y="204" fill="#E9E8DF" font-family="'SFMono-Regular',Consolas,'Liberation Mono',monospace" font-size="14" xml:space="preserve">  Provenance matrix</text>
+<text x="36" y="225" fill="#E9E8DF" font-family="'SFMono-Regular',Consolas,'Liberation Mono',monospace" font-size="14" xml:space="preserve">  VARIABLE                     CODE  DOCS  DEPLOY  STATUS</text>
+<text x="36" y="246" fill="#C9F773" font-family="'SFMono-Regular',Consolas,'Liberation Mono',monospace" font-size="14" xml:space="preserve">  CACHE_TTL                      ●1    ●1      ●1  aligned</text>
+<text x="36" y="267" fill="#C9F773" font-family="'SFMono-Regular',Consolas,'Liberation Mono',monospace" font-size="14" xml:space="preserve">  DATABASE_URL                   ●1    ●1      ●2  aligned</text>
+<text x="36" y="288" fill="#6CC5FF" font-family="'SFMono-Regular',Consolas,'Liberation Mono',monospace" font-size="14" xml:space="preserve">  DEPLOY_REGION                   —     —      ●2  deploy only</text>
+<text x="36" y="309" fill="#F7CA72" font-family="'SFMono-Regular',Consolas,'Liberation Mono',monospace" font-size="14" xml:space="preserve">  LEGACY_FLAG                     —    ●1       —  stale docs</text>
+<text x="36" y="330" fill="#C9F773" font-family="'SFMono-Regular',Consolas,'Liberation Mono',monospace" font-size="14" xml:space="preserve">  LOG_LEVEL                      ●1    ●1      ●2  aligned</text>
+<text x="36" y="351" fill="#C9F773" font-family="'SFMono-Regular',Consolas,'Liberation Mono',monospace" font-size="14" xml:space="preserve">  QUEUE_NAME                     ●1    ●1      ●1  aligned</text>
+<text x="36" y="372" fill="#FF8A5B" font-family="'SFMono-Regular',Consolas,'Liberation Mono',monospace" font-size="14" xml:space="preserve">  STRIPE_SECRET_KEY ◈            ●1     —      ●1  missing docs</text>
+<text x="36" y="393" fill="#E9E8DF" font-family="'SFMono-Regular',Consolas,'Liberation Mono',monospace" font-size="14" xml:space="preserve"></text>
+<text x="36" y="414" fill="#E9E8DF" font-family="'SFMono-Regular',Consolas,'Liberation Mono',monospace" font-size="14" xml:space="preserve">  Findings · 1 error, 2 warnings</text>
+<text x="36" y="435" fill="#E9E8DF" font-family="'SFMono-Regular',Consolas,'Liberation Mono',monospace" font-size="14" xml:space="preserve"></text>
+<text x="36" y="456" fill="#FF8A5B" font-family="'SFMono-Regular',Consolas,'Liberation Mono',monospace" font-size="14" xml:space="preserve">  ✕ EVT001 STRIPE_SECRET_KEY src/server.ts:3</text>
+<text x="36" y="477" fill="#E9E8DF" font-family="'SFMono-Regular',Consolas,'Liberation Mono',monospace" font-size="14" xml:space="preserve">    STRIPE_SECRET_KEY is consumed by code but absent from environment documentation.</text>
+<text x="36" y="498" fill="#84908A" font-family="'SFMono-Regular',Consolas,'Liberation Mono',monospace" font-size="14" xml:space="preserve">    fix Add STRIPE_SECRET_KEY= to .env.example with a safe placeholder and a short comment.</text>
+<text x="36" y="519" fill="#E9E8DF" font-family="'SFMono-Regular',Consolas,'Liberation Mono',monospace" font-size="14" xml:space="preserve"></text>
+<text x="36" y="540" fill="#F7CA72" font-family="'SFMono-Regular',Consolas,'Liberation Mono',monospace" font-size="14" xml:space="preserve">  ▲ EVT002 LEGACY_FLAG .env.example:14</text>
+<text x="36" y="561" fill="#E9E8DF" font-family="'SFMono-Regular',Consolas,'Liberation Mono',monospace" font-size="14" xml:space="preserve">    LEGACY_FLAG is documented but no static consumer was found.</text>
+<text x="36" y="582" fill="#84908A" font-family="'SFMono-Regular',Consolas,'Liberation Mono',monospace" font-size="14" xml:space="preserve">    fix Remove LEGACY_FLAG if obsolete, or add its source pattern to your EnvTrail workflow.</text>
+<text x="36" y="603" fill="#E9E8DF" font-family="'SFMono-Regular',Consolas,'Liberation Mono',monospace" font-size="14" xml:space="preserve"></text>
+<text x="36" y="624" fill="#F7CA72" font-family="'SFMono-Regular',Consolas,'Liberation Mono',monospace" font-size="14" xml:space="preserve">  ▲ EVT003 DEPLOY_REGION compose.yaml:8</text>
+<text x="36" y="645" fill="#E9E8DF" font-family="'SFMono-Regular',Consolas,'Liberation Mono',monospace" font-size="14" xml:space="preserve">    DEPLOY_REGION is supplied by deployment configuration but has no documented consumer.</text>
+<text x="36" y="666" fill="#84908A" font-family="'SFMono-Regular',Consolas,'Liberation Mono',monospace" font-size="14" xml:space="preserve">    fix Confirm the variable is still needed, then document or remove its deployment wiring.</text>
+<text x="36" y="687" fill="#E9E8DF" font-family="'SFMono-Regular',Consolas,'Liberation Mono',monospace" font-size="14" xml:space="preserve"></text>
+<text x="36" y="708" fill="#84908A" font-family="'SFMono-Regular',Consolas,'Liberation Mono',monospace" font-size="14" xml:space="preserve">  7 variables · 24ms · ◈ sensitive name (values never read)</text>
+</svg>

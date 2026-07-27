@@ -1,0 +1,8 @@
+blank_issues_enabled: false
+contact_links:
+  - name: Questions and examples
+    url: https://github.com/aryatech13/envtrail/discussions
+    about: Ask for help or share how you use EnvTrail.
+  - name: Security vulnerability
+    url: https://github.com/aryatech13/envtrail/security/advisories/new
+    about: Report a vulnerability privately.

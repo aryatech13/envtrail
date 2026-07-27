@@ -1,0 +1,77 @@
+{
+  "name": "envtrail",
+  "version": "0.1.0",
+  "description": "Trace environment variables from source code to docs and deployment.",
+  "keywords": [
+    "environment-variables",
+    "dotenv",
+    "configuration",
+    "devtools",
+    "cli",
+    "github-action",
+    "sarif",
+    "devsecops"
+  ],
+  "license": "MIT",
+  "author": "aryatech13",
+  "type": "module",
+  "sideEffects": false,
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js"
+    }
+  },
+  "bin": {
+    "envtrail": "./dist/cli.js"
+  },
+  "files": [
+    "dist",
+    "envtrail.schema.json",
+    "README.md",
+    "LICENSE"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/aryatech13/envtrail.git"
+  },
+  "bugs": {
+    "url": "https://github.com/aryatech13/envtrail/issues"
+  },
+  "homepage": "https://github.com/aryatech13/envtrail#readme",
+  "engines": {
+    "node": ">=22"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "scripts": {
+    "build": "rimraf dist && tsup",
+    "check": "npm run lint && npm run test && npm run build && npm run dogfood && npm run pack:check",
+    "dev": "tsx src/cli.ts",
+    "dogfood": "node dist/cli.js check . --config .envtrailrc.json --fail-on error --no-color",
+    "lint": "tsc --noEmit",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "test:coverage": "vitest run --coverage",
+    "pack:check": "npm --cache .npm-cache pack --dry-run",
+    "assets": "node scripts/render-assets.mjs",
+    "personalize": "node scripts/personalize.mjs"
+  },
+  "dependencies": {
+    "picocolors": "^1.1.1",
+    "yaml": "^2.9.0"
+  },
+  "devDependencies": {
+    "@types/node": "^24.13.3",
+    "@vitest/coverage-v8": "^4.1.10",
+    "rimraf": "^6.1.2",
+    "sharp": "^0.35.3",
+    "tsup": "^8.5.1",
+    "tsx": "^4.21.0",
+    "typescript": "^5.9.3",
+    "vitest": "^4.1.10"
+  }
+}

@@ -1,0 +1,38 @@
+name: EnvTrail
+description: Trace environment variables from source code to docs and deployment.
+author: aryatech13
+branding:
+  icon: git-branch
+  color: green
+
+inputs:
+  path:
+    description: Project directory to scan.
+    required: false
+    default: "."
+  config:
+    description: Path to an EnvTrail JSON config, relative to the project.
+    required: false
+  format:
+    description: Log format (terminal, json, sarif, or markdown).
+    required: false
+    default: terminal
+  fail-on:
+    description: Lowest severity that fails the check (error, warning, or never).
+    required: false
+    default: error
+  report:
+    description: Optional path for a standalone HTML report.
+    required: false
+
+outputs:
+  score:
+    description: Configuration health score from 0 to 100.
+  issues:
+    description: Total number of findings.
+  errors:
+    description: Number of error-level findings.
+
+runs:
+  using: node24
+  main: dist/action.cjs
